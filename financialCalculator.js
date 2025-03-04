@@ -48,9 +48,29 @@ const totalTransactions = transactions.length;
 // - totalSum: Sum of all transactions (use addUpArrayElements function).
 const totalSum = addUpArrayElements(transactions);
 // - averageTransaction: Average transaction value (calculate using totalSum and totalTransactions).
+let averageTransaction = 0;
+
+if (totalTransactions !== 0) {
+  averageTransaction = totalTransactions / totalSum
+}
 // - totalIncome: Sum of all positive transactions.
+let totalIncome = 0;
+
+for (let i = 0; i < transactions.length; i++) {
+  if (transactions[i] > 0) {
+    totalIncome += transactions[i];
+  }
+}
 // - totalExpenses: Sum of all negative transactions.
+let totalExpenses = 0;
+
+for (let i = 0; i < transactions.length; i++) {
+  if (transactions[i] < 0) {
+    totalExpenses += transactions[i];
+  }
+}
 // - netBalance: Total of totalIncome and totalExpenses.
+const netBalance = totalIncome + totalExpenses;
 
 
 // Create an array of fun fact rows. Each row is a two-element array: [Fact, Value].
