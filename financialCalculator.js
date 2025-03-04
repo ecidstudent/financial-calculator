@@ -44,7 +44,9 @@ if (transactions.length === 0) {
 
 // TODO: Before creating the funFacts array, define the following variables:
 // - totalTransactions: Total number of transactions (use array length).
+const totalTransactions = transactions.length;
 // - totalSum: Sum of all transactions (use addUpArrayElements function).
+const totalSum = addUpArrayElements(transactions);
 // - averageTransaction: Average transaction value (calculate using totalSum and totalTransactions).
 // - totalIncome: Sum of all positive transactions.
 // - totalExpenses: Sum of all negative transactions.
